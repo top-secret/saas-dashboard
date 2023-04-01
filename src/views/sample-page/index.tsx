@@ -1,5 +1,6 @@
 // material-ui
-import { Typography } from "@mui/material";
+import { Button, Typography } from "@mui/material";
+import { Box, Stack } from "@mui/system";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -17,7 +18,6 @@ const SamplePage = () => {
   useEffect(() => {
     if (!leadsSelector.error && leadsSelector.success) {
       console.log(leadsSelector);
-      debugger;
       setData([...leadsSelector.leads]);
     }
   }, [leadsSelector]);
@@ -26,11 +26,24 @@ const SamplePage = () => {
   useEffect(() => {
     dispatch(getAllLeads());
   }, []);
-  console.log(data);
   return (
-    <MainCard title="Leads Board">
-      <Table data={data} />
-    </MainCard>
+    <>
+      <Stack direction={"row"} justifyContent={"end"} py={2}>
+        <Button
+          disableElevation
+          size="large"
+          type="submit"
+          variant="contained"
+          color="secondary"
+        >
+          Add Lead
+        </Button>
+      </Stack>
+
+      <MainCard title="Leads Board">
+        <Table data={data} />
+      </MainCard>
+    </>
   );
 };
 

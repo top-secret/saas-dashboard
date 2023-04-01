@@ -18,13 +18,11 @@ const leadSlice= createSlice({
       state.error = null;
     },
     [getAllLeads.fulfilled]: (state, { payload }) => {
-        debugger
       state.loading = false;
       state.success = true; // registration successful
       state.leads = payload
     },
     [getAllLeads.rejected]: (state, { payload }) => {
-        debugger
       state.loading = false;
       state.error = payload;
     },
