@@ -87,7 +87,7 @@ const MainRoutes = {
       ],
     },
     {
-      path: "sample-page",
+      path: "leads",
       element: <SamplePage />,
     },
   ],

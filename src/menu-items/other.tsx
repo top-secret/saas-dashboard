@@ -7,25 +7,16 @@ const icons = { IconBrandChrome, IconHelp };
 // ==============================|| SAMPLE PAGE & DOCUMENTATION MENU ITEMS ||============================== //
 
 const other = {
-  id: "sample-docs-roadmap",
+  id: "leads board",
   type: "group",
   children: [
     {
-      id: "sample-page",
-      title: "Sample Page",
+      id: "leads",
+      title: "Leads Board",
       type: "item",
-      url: "/sample-page",
+      url: "/leads",
       icon: icons.IconBrandChrome,
       breadcrumbs: false,
-    },
-    {
-      id: "documentation",
-      title: "Documentation",
-      type: "item",
-      url: "https://codedthemes.gitbook.io",
-      icon: icons.IconHelp,
-      external: true,
-      target: true,
     },
   ],
 };
