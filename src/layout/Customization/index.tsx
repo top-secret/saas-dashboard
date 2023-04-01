@@ -22,12 +22,11 @@ import { IconSettings } from '@tabler/icons';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 
 // project imports
-import SubCard from 'ui-component/cards/SubCard';
-import AnimateButton from 'ui-component/extended/AnimateButton';
-import { SET_BORDER_RADIUS, SET_FONT_FAMILY } from 'store/actions';
-import { gridSpacing } from 'store/constant';
+import SubCard from '../../ui-component/cards/SubCard';
+import AnimateButton from '../../ui-component/extended/AnimateButton';
+import { SET_BORDER_RADIUS, SET_FONT_FAMILY } from '../../store/actions';
+import { gridSpacing } from '../../store/constant';
 
-// concat 'px'
 function valueText(value) {
     return `${value}px`;
 }
@@ -90,34 +89,6 @@ const Customization = () => {
 
     return (
         <>
-            {/* toggle button */}
-            <Tooltip title="Live Customize">
-                <Fab
-                    component="div"
-                    onClick={handleToggle}
-                    size="medium"
-                    variant="circular"
-                    color="secondary"
-                    sx={{
-                        borderRadius: 0,
-                        borderTopLeftRadius: '50%',
-                        borderBottomLeftRadius: '50%',
-                        borderTopRightRadius: '50%',
-                        borderBottomRightRadius: '4px',
-                        top: '25%',
-                        position: 'fixed',
-                        right: 10,
-                        zIndex: theme.zIndex.speedDial
-                    }}
-                >
-                    <AnimateButton type="rotate">
-                        <IconButton color="inherit" size="large" disableRipple>
-                            <IconSettings />
-                        </IconButton>
-                    </AnimateButton>
-                </Fab>
-            </Tooltip>
-
             <Drawer
                 anchor="right"
                 onClose={handleToggle}

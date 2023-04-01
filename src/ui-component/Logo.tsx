@@ -45,7 +45,7 @@ const Logo = () => {
           fill={theme.palette.secondary.main}
         />
       </svg>
-      <Typography variant="h3">Dashboard</Typography>
+      <Typography variant="h3">Sales Dashboard</Typography>
     </Stack>
   );
 };

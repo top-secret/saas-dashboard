@@ -1,4 +1,3 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
 
 // third party
@@ -11,9 +10,6 @@ import { store } from "./store";
 
 // style + assets
 import "assets/scss/style.scss";
-import config from "./config";
-
-// ==============================|| REACT DOM RENDER  ||============================== //
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <Provider store={store}>

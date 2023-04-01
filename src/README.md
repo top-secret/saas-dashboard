@@ -34,7 +34,7 @@ Vite provides support for .scss, .sass,.less, .styl and .stylus files, PostCSS, 
 
 # Run Command
 
-`npm run dev`
+`npm run start:dev`
 
 # Build Commands
 
