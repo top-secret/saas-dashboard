@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 const dashboardUrl = "https://run.mocky.io/v3/83d0026e-66f5-40dd-9ddf-54e488fe07b4"

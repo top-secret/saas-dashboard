@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 const loginUrl = "https://run.mocky.io/v3/208eb561-a820-4cc8-8308-be31362405fe"

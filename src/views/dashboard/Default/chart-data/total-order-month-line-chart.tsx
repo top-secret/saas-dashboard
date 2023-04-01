@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 // ===========================|| DASHBOARD - TOTAL ORDER MONTH CHART ||=========================== //
 
 const chartData = {

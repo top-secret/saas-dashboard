@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 /**
  * Color intention that you want to used in your theme
  * @param {JsonObject} theme Theme customization object

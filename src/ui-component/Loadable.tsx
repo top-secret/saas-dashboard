@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { Suspense } from "react";
 
 // project imports

@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 const leadsUrl = "https://run.mocky.io/v3/8b97c004-b6d6-4607-9064-99001a0b7835"

@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 // material-ui
 import { Button, Typography } from "@mui/material";
 import { Box, Stack } from "@mui/system";

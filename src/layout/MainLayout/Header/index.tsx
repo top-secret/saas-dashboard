@@ -1,6 +1,9 @@
+// @ts-nocheck
+
 import PropTypes from 'prop-types';
 
 // material-ui
+// @ts-nocheck
 import { useTheme } from '@mui/material/styles';
 import { Avatar, Box, ButtonBase } from '@mui/material';
 

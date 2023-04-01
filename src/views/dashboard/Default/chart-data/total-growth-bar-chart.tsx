@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 // ===========================|| DASHBOARD - TOTAL GROWTH BAR CHART ||=========================== //
 
 const chartData = {

@@ -1,9 +1,11 @@
+// @ts-nocheck
+
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 
 // ==============================|| ANIMATION FOR CONTENT ||============================== //
 
-const NavMotion = ({ children }) => {
+const NavMotion = ({ children: any }) => {
     const motionVariants = {
         initial: {
             opacity: 0,

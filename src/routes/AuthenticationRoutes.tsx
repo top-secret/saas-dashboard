@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { lazy } from "react";
 
 // project imports

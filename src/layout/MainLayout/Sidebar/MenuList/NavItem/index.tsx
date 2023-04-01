@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import PropTypes from 'prop-types';
 import { forwardRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';

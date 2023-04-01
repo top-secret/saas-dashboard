@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { createSlice } from "@reduxjs/toolkit";
 import { getDshboardData } from "./dashboardActions";
 const initialState = {

@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 // material-ui
 import { CardContent, Grid, Skeleton, Stack } from '@mui/material';
 

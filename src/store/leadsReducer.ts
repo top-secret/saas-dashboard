@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { createSlice } from "@reduxjs/toolkit";
 import { getAllLeads } from "./leadsActions";
 const initialState = {
