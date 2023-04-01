@@ -4,13 +4,15 @@ import { combineReducers } from 'redux';
 import customizationReducer from './customizationReducer';
 import  authReducer from './authenticationReducer';
 import leadsReducer from './leadsReducer';
+import dashboardReducer from './dashboardReducer';
 
 // ==============================|| COMBINE REDUCER ||============================== //
 
 const reducer = combineReducers({
     customization: customizationReducer,
     auth: authReducer,
-    leads: leadsReducer
+    leads: leadsReducer,
+    dashboard: dashboardReducer
 });
 
 export default reducer;

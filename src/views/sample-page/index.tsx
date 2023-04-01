@@ -17,7 +17,6 @@ const SamplePage = () => {
 
   useEffect(() => {
     if (!leadsSelector.error && leadsSelector.success) {
-      console.log(leadsSelector);
       setData([...leadsSelector.leads]);
     }
   }, [leadsSelector]);

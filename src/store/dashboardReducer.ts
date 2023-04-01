@@ -1,31 +1,31 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getAllLeads } from "./leadsActions";
+import { getDshboardData } from "./dashboardActions";
 const initialState = {
-  leads: [],
+  dashboardData: {},
   loading: false,
   error: false,
   success: false,
 };
 
-const leadSlice= createSlice({
-  name: "leads",
+const dashboardSlice= createSlice({
+  name: "dashboard",
   initialState,
   reducers: {},
   extraReducers: {
-    [getAllLeads.pending]: (state) => {
+    [getDshboardData.pending]: (state) => {
       state.loading = true;
       state.error = null;
     },
-    [getAllLeads.fulfilled]: (state, { payload }) => {
+    [getDshboardData.fulfilled]: (state, { payload }) => {
       state.loading = false;
       state.success = true;
-      state.leads = payload
+      state.dashboardData = payload
     },
-    [getAllLeads.rejected]: (state, { payload }) => {
+    [getDshboardData.rejected]: (state, { payload }) => {
       state.loading = false;
       state.error = payload;
     },
   },
 });
 
-export default leadSlice.reducer;
+export default dashboardSlice.reducer;

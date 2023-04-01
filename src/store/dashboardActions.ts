@@ -1,12 +1,12 @@
 import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
-const leadsUrl = "https://run.mocky.io/v3/8b97c004-b6d6-4607-9064-99001a0b7835"
+const dashboardUrl = "https://run.mocky.io/v3/83d0026e-66f5-40dd-9ddf-54e488fe07b4"
 
-export const getAllLeads = createAsyncThunk(
-    "getAllLeads",
+export const getDshboardData = createAsyncThunk(
+    "dashboard",
     async () => {
       try {
-        const response = await axios.get(`${leadsUrl}`);
+        const response = await axios.get(`${dashboardUrl}`);
   
         if(response.status === 200){
           return response.data
