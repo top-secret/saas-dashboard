@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 // material-ui
 import { useTheme } from "@mui/material/styles";
@@ -37,6 +37,7 @@ import Google from "assets/images/icons/social-google.svg";
 import axios from "axios";
 import { useNavigate } from "react-router";
 import { routeContants } from "routes/constants";
+import { loginUser } from "../../../../store/authenticationActions";
 
 // ============================|| FIREBASE - LOGIN ||============================ //
 
@@ -44,9 +45,19 @@ const FirebaseLogin = ({ ...others }) => {
   const theme = useTheme();
   const scriptedRef = useScriptRef();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const matchDownSM = useMediaQuery(theme.breakpoints.down("md"));
   const customization = useSelector((state) => state.customization);
   const [checked, setChecked] = useState(true);
+  const userSelector: any = useSelector((state: any) => state.auth);
+
+  useEffect(() => {
+    if (!userSelector.error && !userSelector.loading && userSelector.success) {
+      localStorage.setItem("token", JSON.stringify(useSelector.userToken));
+      navigate(`/${routeContants.dashboard}`);
+    }
+    console.log(userSelector);
+  }, [userSelector]);
 
   const googleHandler = async () => {
     console.error("Login");
@@ -151,16 +162,15 @@ const FirebaseLogin = ({ ...others }) => {
         })}
         onSubmit={async (values, { setErrors, setStatus, setSubmitting }) => {
           try {
-            const response = await axios.get(
-              "https://run.mocky.io/v3/208eb561-a820-4cc8-8308-be31362405fe"
+            dispatch(
+              loginUser({ email: values.email, password: values.password })
             );
-            console.log(response);
 
-            if (response.status === 200) {
-              setStatus({ success: true });
-              setSubmitting(false);
-              navigate(`/${routeContants.dashboard}`);
-            }
+            // if (response.status === 200) {
+            //   setStatus({ success: true });
+            //   setSubmitting(false);
+            //   navigate(`/${routeContants.dashboard}`);
+            // }
           } catch (err) {
             console.error(err);
 
